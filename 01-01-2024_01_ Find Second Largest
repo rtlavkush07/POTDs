@@ -1,0 +1,29 @@
+//POTD #1 ► 01/01/2024
+//Author : Lav Kumar
+//---------------------
+
+class Solution{
+public:	
+	// Function returns the second
+	// largest elements
+	int print2largest(int arr[], int n) {
+	    int large1=arr[0];  // initialising the largest element to first element 
+	    int large2=-1;  // if second largest does not exist then print -1
+	    for (int i=0;i<n;i++)
+	    {
+	        if(large1<arr[i])
+	        {
+	            large1=arr[i];
+	        }
+	        
+	    }
+	    for (int i=0; i<n;i++)
+	    {
+	        if(large2<arr[i] && arr[i] != large1)
+	        {
+	            large2=arr[i];
+	        }
+	    }
+	    return large2;
+	}
+};
