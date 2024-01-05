@@ -1,0 +1,11 @@
+
+//POTD #3 ► 03/01/2024
+//Author : Lav Kumar
+
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
+        return nums[(int)nums.size()/2];
+    }
+};
