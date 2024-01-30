@@ -1,0 +1,25 @@
+// lav kumar
+
+class Solution {
+public:
+    int searchInsert(vector<int>& nums, int target) {
+        int n=nums.size();
+        int l=0,h=n-1,mid,c=0;
+        while(l<=h)
+        {
+            mid=(l+h)/2;
+            if(target==nums[mid])
+            return mid;
+            if(target<nums[mid])
+            h=mid-1;
+            if(target>nums[mid])
+            l=mid+1;
+        }
+        return l;
+
+        
+    }
+    
+    
+    
+};
