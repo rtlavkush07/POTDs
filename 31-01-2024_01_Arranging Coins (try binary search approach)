@@ -1,0 +1,18 @@
+// lav kumar
+
+class Solution {
+public:
+    int arrangeCoins(int n) {
+int c=0,ans=0,i;
+for(i=0; i<n; i++)
+{
+    ++c;
+    n=n-(i+1);
+}
+if(c==(i+1))
+ans=i+1;
+else
+ans=i;
+return ans; 
+    }
+};
