@@ -1,0 +1,33 @@
+//Name:- Lav Kumar
+// Reg no:- 2023CA57
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+	int n;
+	string a="codeforces";
+	cin>>n;
+	char b[n][10];
+
+	for(int i=0; i<n; i++){
+		for(int j=0; j<10; j++)
+		{
+			cin>>b[i][j];
+		}
+	}
+	for(int i=0; i<n; i++)
+	{ 
+	
+	int c=0;
+		for(int j=0; j<10; j++)
+	{
+		if(a[j]!=b[i][j])
+		c++;
+	}
+	cout<<c<<endl;
+	}
+	
+}
