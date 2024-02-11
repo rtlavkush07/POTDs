@@ -1,0 +1,17 @@
+
+// Name:- Lav kumar
+// reg no:-2023CA57
+
+int minMoves(int a[], int n, int k)
+{
+    int cnt=0;
+    for(int i=1;i<n;i++){
+        if(a[i]>a[i-1]){
+            int diff=a[i]-a[i-1];
+            int times=ceil(static_cast<double>(diff)/k);
+            cnt=(cnt+times)%1000000007;
+            a[i]=a[i]-times*k;
+        }
+    }
+    return cnt%1000000007;
+}
